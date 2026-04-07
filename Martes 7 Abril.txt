@@ -1,0 +1,555 @@
+Last login: Mon Apr  6 17:09:53 on ttys000
+anabel@MacBook-Air-de-Anabel ~ % git --version
+git version 2.53.0
+anabel@MacBook-Air-de-Anabel ~ % git version 
+git version 2.53.0
+anabel@MacBook-Air-de-Anabel ~ % git -v     
+git version 2.53.0
+anabel@MacBook-Air-de-Anabel ~ % git config --global user.name "Anabel Vegas"
+anabel@MacBook-Air-de-Anabel ~ % git config --global user.email "anaisabelveg@gmail.com"
+anabel@MacBook-Air-de-Anabel ~ % git config --global --list
+user.name=Anabel Vegas
+user.email=anaisabelveg@gmail.com
+anabel@MacBook-Air-de-Anabel ~ % cd Desktop 
+anabel@MacBook-Air-de-Anabel Desktop % cd EjemploGIT 
+anabel@MacBook-Air-de-Anabel EjemploGIT % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Inicializado repositorio Git vacío en /Users/anabel/Desktop/EjemploGIT/.git/
+anabel@MacBook-Air-de-Anabel EjemploGIT % git help
+uso: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
+           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
+           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+Estos son comandos comunes de Git usados en varias situaciones:
+
+comenzar un área de trabajo (mira también: git help tutorial)
+   clone      Clonar un repositorio dentro de un nuevo directorio
+   init       Crear un repositorio de Git vacío o reinicia el que ya existe
+
+trabajar en los cambios actuales (mira también: git help everyday)
+   add        Agregar contenido de archivos al índice
+   mv         Mover o cambiar el nombre a archivos, directorios o enlaces simbólicos
+   restore    Restaurar archivos del árbol de trabajo
+   rm         Borrar archivos del árbol de trabajo y del índice
+
+examinar el historial y el estado (mira también: git help revisions)
+   bisect     Usar la búsqueda binaria para encontrar el commit que introdujo el bug
+   diff       Mostrar los cambios entre commits, commit y árbol de trabajo, etc
+   grep       Imprimir las líneas que concuerden con el patrón
+   log        Mostrar los logs de los commits
+   show       Mostrar varios tipos de objetos
+   status     Mostrar el estado del árbol de trabajo
+
+crecer, marcar y ajustar tu historial común
+   backfill   Download missing objects in a partial clone
+   branch     Listar, crear, o borrar ramas
+   commit     Grabar los cambios al repositorio
+   merge      Juntar dos o más historiales de desarrollo juntos
+   rebase     Volver a aplicar commits en la punta de otra rama
+   reset      Set `HEAD` or the index to a known state
+   switch     Cambiar de branch
+   tag        Create, list, delete or verify tags
+
+colaborar (mira también: git help workflows)
+   fetch      Descargar objetos y referencias de otro repositorio
+   pull       Realizar un fetch e integra con otro repositorio o rama local
+   push       Actualizar referencias remotas junto con sus objetos asociados
+
+'git help -a' y 'git help -g' listan los subcomandos disponibles y algunas
+guías de concepto. Consulta 'git help <command>' o 'git help <concepto>'
+para leer sobre un subcomando o concepto específico.
+Mira 'git help git' para una vista general del sistema.
+anabel@MacBook-Air-de-Anabel EjemploGIT % q
+zsh: command not found: q
+anabel@MacBook-Air-de-Anabel EjemploGIT % 
+anabel@MacBook-Air-de-Anabel EjemploGIT % git help push
+anabel@MacBook-Air-de-Anabel EjemploGIT % git status
+En la rama master
+
+No hay commits todavía
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+	archivo.txt
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+anabel@MacBook-Air-de-Anabel EjemploGIT % git add archivo.txt
+anabel@MacBook-Air-de-Anabel EjemploGIT % git commit -m "Primer commit"
+[master (commit-raíz) 19f3149] Primer commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo.txt
+anabel@MacBook-Air-de-Anabel EjemploGIT % git status
+En la rama master
+nada para hacer commit, el árbol de trabajo está limpio
+anabel@MacBook-Air-de-Anabel EjemploGIT % git status
+En la rama master
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	modificados:     archivo.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+anabel@MacBook-Air-de-Anabel EjemploGIT % git diff
+diff --git a/archivo.txt b/archivo.txt
+index fd1397e..1f0e4a2 100644
+--- a/archivo.txt
++++ b/archivo.txt
+@@ -1 +1,2 @@
+-Bienvenidos al curso de GIT
+\ No newline at end of file
++Bienvenidos al curso de GIT
++Hoy es Martes
+\ No newline at end of file
+anabel@MacBook-Air-de-Anabel EjemploGIT % git add archivo.txt
+anabel@MacBook-Air-de-Anabel EjemploGIT % git commit -m "Segundo commit"
+[master 4157280] Segundo commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit 41572802dbe731a2936e163a295c0b84ff330588 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git add archivo.txt
+anabel@MacBook-Air-de-Anabel EjemploGIT % git commit -m "Tercer commit"
+[master 1b07e63] Tercer commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit 1b07e63946aa0ed0b7e0f26b2ecc230d8ddfe1b1 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:46:17 2026 +0200
+
+    Tercer commit
+
+commit 41572802dbe731a2936e163a295c0b84ff330588
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Nota: cambiando a '19f314911c9dfee20ebcacd207ecfd23e9f2affb'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y hacer commits, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -c con el comando checkout. Ejemplo:
+
+  git switch -c <nombre-de-nueva-rama>
+
+O deshacer la operación con:
+
+  git switch -
+
+Desactiva este aviso poniendo la variable de config advice.detachedHead en false
+
+HEAD está ahora en 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout 41572802dbe731a2936e163a295c0b84ff330588
+La posición previa de HEAD era 19f3149 Primer commit
+HEAD está ahora en 4157280 Segundo commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit 41572802dbe731a2936e163a295c0b84ff330588 (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git cheackout
+git: 'cheackout' no es un comando de git. Mira 'git --help'.
+
+El comando más similar es
+	checkout
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout 
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit 41572802dbe731a2936e163a295c0b84ff330588 (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout 1b07e63946aa0ed0b7e0f26b2ecc230d8ddfe1b1
+La posición previa de HEAD era 4157280 Segundo commit
+HEAD está ahora en 1b07e63 Tercer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit 1b07e63946aa0ed0b7e0f26b2ecc230d8ddfe1b1 (HEAD, master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:46:17 2026 +0200
+
+    Tercer commit
+
+commit 41572802dbe731a2936e163a295c0b84ff330588
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log --oneline --graph --all
+* 1b07e63 (HEAD, master) Tercer commit
+* 4157280 Segundo commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git config --global alias.grafo 'log --oneline --graph --all'
+anabel@MacBook-Air-de-Anabel EjemploGIT % git config --list
+credential.helper=osxkeychain
+user.name=Anabel Vegas
+user.email=anaisabelveg@gmail.com
+alias.grafo=log --oneline --graph --all
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+anabel@MacBook-Air-de-Anabel EjemploGIT % git grafo
+* 1b07e63 (HEAD, master) Tercer commit
+* 4157280 Segundo commit
+* 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout 41572802dbe731a2936e163a295c0b84ff330588
+La posición previa de HEAD era 1b07e63 Tercer commit
+HEAD está ahora en 4157280 Segundo commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git grafo                                            
+* 1b07e63 (master) Tercer commit
+* 4157280 (HEAD) Segundo commit
+* 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git branch experimental
+anabel@MacBook-Air-de-Anabel EjemploGIT % git branch
+* (HEAD desacoplado en 4157280)
+  experimental
+  master
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout experimental
+Cambiado a rama 'experimental'
+anabel@MacBook-Air-de-Anabel EjemploGIT % git grafo
+* 1b07e63 (master) Tercer commit
+* 4157280 (HEAD -> experimental) Segundo commit
+* 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout master
+Cambiado a rama 'master'
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout 1b07e63946aa0ed0b7e0f26b2ecc230d8ddfe1b1
+Nota: cambiando a '1b07e63946aa0ed0b7e0f26b2ecc230d8ddfe1b1'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y hacer commits, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -c con el comando checkout. Ejemplo:
+
+  git switch -c <nombre-de-nueva-rama>
+
+O deshacer la operación con:
+
+  git switch -
+
+Desactiva este aviso poniendo la variable de config advice.detachedHead en false
+
+HEAD está ahora en 1b07e63 Tercer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git grafo
+* 1b07e63 (HEAD, master) Tercer commit
+* 4157280 (experimental) Segundo commit
+* 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout experimental
+La posición previa de HEAD era 1b07e63 Tercer commit
+Cambiado a rama 'experimental'
+anabel@MacBook-Air-de-Anabel EjemploGIT % git add -A
+anabel@MacBook-Air-de-Anabel EjemploGIT % git commit -m "Primer commit experimental"
+[experimental fbf7957] Primer commit experimental
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploGIT % git grafo
+* fbf7957 (HEAD -> experimental) Primer commit experimental
+| * 1b07e63 (master) Tercer commit
+|/  
+* 4157280 Segundo commit
+* 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git commit -am "Segundo commit experimental"
+[experimental 1536756] Segundo commit experimental
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploGIT % git grafo
+* 1536756 (HEAD -> experimental) Segundo commit experimental
+* fbf7957 Primer commit experimental
+| * 1b07e63 (master) Tercer commit
+|/  
+* 4157280 Segundo commit
+* 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git help add
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout master
+Cambiado a rama 'master'
+anabel@MacBook-Air-de-Anabel EjemploGIT % git grafo
+* 1536756 (experimental) Segundo commit experimental
+* fbf7957 Primer commit experimental
+| * 1b07e63 (HEAD -> master) Tercer commit
+|/  
+* 4157280 Segundo commit
+* 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout 41572802dbe731a2936e163a295c0b84ff330588
+Nota: cambiando a '41572802dbe731a2936e163a295c0b84ff330588'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y hacer commits, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -c con el comando checkout. Ejemplo:
+
+  git switch -c <nombre-de-nueva-rama>
+
+O deshacer la operación con:
+
+  git switch -
+
+Desactiva este aviso poniendo la variable de config advice.detachedHead en false
+
+HEAD está ahora en 4157280 Segundo commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git grafo                                            
+* 1536756 (experimental) Segundo commit experimental
+* fbf7957 Primer commit experimental
+| * 1b07e63 (master) Tercer commit
+|/  
+* 4157280 (HEAD) Segundo commit
+* 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git help tags
+No manual entry for gittags
+anabel@MacBook-Air-de-Anabel EjemploGIT % git help tag 
+anabel@MacBook-Air-de-Anabel EjemploGIT % git -c user.name="Anabel Vegas" -c user.email="anaisabelveg@gmail.com" tag -a v1.0 -m "Version 1.0" 
+anabel@MacBook-Air-de-Anabel EjemploGIT % git grafo
+* 1536756 (experimental) Segundo commit experimental
+* fbf7957 Primer commit experimental
+| * 1b07e63 (master) Tercer commit
+|/  
+* 4157280 (HEAD, tag: v1.0) Segundo commit
+* 19f3149 Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git show v1.0
+tag v1.0
+Tagger: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 12:55:22 2026 +0200
+
+Version 1.0
+
+commit 41572802dbe731a2936e163a295c0b84ff330588 (HEAD, tag: v1.0)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+diff --git a/archivo.txt b/archivo.txt
+index fd1397e..1f0e4a2 100644
+--- a/archivo.txt
++++ b/archivo.txt
+@@ -1 +1,2 @@
+-Bienvenidos al curso de GIT
+\ No newline at end of file
++Bienvenidos al curso de GIT
++Hoy es Martes
+\ No newline at end of file
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit 41572802dbe731a2936e163a295c0b84ff330588 (HEAD, tag: v1.0)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git checkout 1b07e63946aa0ed0b7e0f26b2ecc230d8ddfe1b1
+La posición previa de HEAD era 4157280 Segundo commit
+HEAD está ahora en 1b07e63 Tercer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit 1b07e63946aa0ed0b7e0f26b2ecc230d8ddfe1b1 (HEAD, master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:46:17 2026 +0200
+
+    Tercer commit
+
+commit 41572802dbe731a2936e163a295c0b84ff330588 (tag: v1.0)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log> commits.txt
+anabel@MacBook-Air-de-Anabel EjemploGIT % git add -p archivo.txt
+No changes.
+anabel@MacBook-Air-de-Anabel EjemploGIT % git add -p archivo.txt
+diff --git a/archivo.txt b/archivo.txt
+index aab0dcc..0d64f02 100644
+--- a/archivo.txt
++++ b/archivo.txt
+@@ -1,3 +1,6 @@
+ Bienvenidos al curso de GIT
+ Hoy es Martes
+-Vuelta de Semana Santa
+\ No newline at end of file
++Vuelta de Semana Santa
++Esto es una prueba
++para subir
++solo parte del codigo
+\ No newline at end of file
+(1/1) ¿Aplicar stage a este fragmento [y,n,q,a,d,e,p,P,?]? s
+Perdón, no se puede dividir este pedazo
+(1/1) ¿Aplicar stage a este fragmento [y,n,q,a,d,e,p,P,?]? e
+error: el parche falló: archivo.txt:1
+error: archivo.txt: el parche no aplica
+error: falló 'git apply --cached'
+Tu hunk editado no aplica. ¿Editar nuevamente (¡decir "no" descarta!) [y/n]? y
+
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit 1b07e63946aa0ed0b7e0f26b2ecc230d8ddfe1b1 (HEAD, master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:46:17 2026 +0200
+
+    Tercer commit
+
+commit 41572802dbe731a2936e163a295c0b84ff330588 (tag: v1.0)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploGIT % git commit -m "cuarto commit selectivo"
+[HEAD desacoplado d0b9e66] cuarto commit selectivo
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploGIT % git log
+commit d0b9e6619b0569e358a0865d5b8a9d92d228c5c0 (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 13:15:02 2026 +0200
+
+    cuarto commit selectivo
+
+commit 1b07e63946aa0ed0b7e0f26b2ecc230d8ddfe1b1 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:46:17 2026 +0200
+
+    Tercer commit
+
+commit 41572802dbe731a2936e163a295c0b84ff330588 (tag: v1.0)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:42:49 2026 +0200
+
+    Segundo commit
+
+commit 19f314911c9dfee20ebcacd207ecfd23e9f2affb
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Tue Apr 7 11:38:04 2026 +0200
+
+anabel@MacBook-Air-de-Anabel EjemploGIT % git add -p archivo.txt                 
+diff --git a/archivo.txt b/archivo.txt
+index 10f81c7..08c1a85 100644
+--- a/archivo.txt
++++ b/archivo.txt
+@@ -1,5 +1,7 @@
+ Bienvenidos al curso de GIT
+ Hoy es Martes
+ Vuelta de Semana Santa
++Esto es una prueba
+ para subir
+-solo parte del codigo
+\ No newline at end of file
++solo parte del codigo
++aaaaaaaaa
+\ No newline at end of file
+(1/1) ¿Aplicar stage a este fragmento [y,n,q,a,d,s,e,p,P,?]? e
+error: there was a problem with the editor 'vi'
+error: no se pudo editar '.git/addp-hunk-edit.diff': Undefined error: 0
+Tu hunk editado no aplica. ¿Editar nuevamente (¡decir "no" descarta!) [y/n]? y
+error: el parche falló: archivo.txt:1
+error: archivo.txt: el parche no aplica
+error: falló 'git apply --cached'
+Tu hunk editado no aplica. ¿Editar nuevamente (¡decir "no" descarta!) [y/n]? n
+(1/1) ¿Aplicar stage a este fragmento [y,n,q,a,d,s,e,p,P,?]? y
+
+anabel@MacBook-Air-de-Anabel EjemploGIT % git status
+HEAD desacoplada de 1b07e63
+Cambios a ser confirmados:
+  (usa "git restore --staged <archivo>..." para sacar del área de stage)
+	modificados:     archivo.txt
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	modificados:     archivo.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+	commits.txt
+
+anabel@MacBook-Air-de-Anabel EjemploGIT % git diff --staged
+diff --git a/archivo.txt b/archivo.txt
+index 10f81c7..08c1a85 100644
+--- a/archivo.txt
++++ b/archivo.txt
+@@ -1,5 +1,7 @@
+ Bienvenidos al curso de GIT
+ Hoy es Martes
+ Vuelta de Semana Santa
++Esto es una prueba
+ para subir
+-solo parte del codigo
+\ No newline at end of file
++solo parte del codigo
++aaaaaaaaa
+\ No newline at end of file
+anabel@MacBook-Air-de-Anabel EjemploGIT % git restore --staged archivo.txt
+anabel@MacBook-Air-de-Anabel EjemploGIT % git restore archivo.txt 
+anabel@MacBook-Air-de-Anabel EjemploGIT % 
