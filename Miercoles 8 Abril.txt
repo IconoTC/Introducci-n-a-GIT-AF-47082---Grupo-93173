@@ -1,0 +1,2542 @@
+Last login: Tue Apr  7 10:37:53 on ttys000
+anabel@MacBook-Air-de-Anabel ~ % cd Desktop 
+anabel@MacBook-Air-de-Anabel Desktop % cd GIT_Indra_7_Abril_2026 
+anabel@MacBook-Air-de-Anabel GIT_Indra_7_Abril_2026 % cd EjemploBranch 
+anabel@MacBook-Air-de-Anabel EjemploBranch % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Inicializado repositorio Git vacío en /Users/anabel/Desktop/GIT_Indra_7_Abril_2026/EjemploBranch/.git/
+anabel@MacBook-Air-de-Anabel EjemploBranch % git logs
+git: 'logs' no es un comando de git. Mira 'git --help'.
+
+El comando más similar es
+	log
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log 
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --soft 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log                                                  
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --soft
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --mixed
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout beeab7f57074ac15f5096017072f5d963f40274a
+Nota: cambiando a 'beeab7f57074ac15f5096017072f5d963f40274a'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y hacer commits, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -c con el comando checkout. Ejemplo:
+
+  git switch -c <nombre-de-nueva-rama>
+
+O deshacer la operación con:
+
+  git switch -
+
+Desactiva este aviso poniendo la variable de config advice.detachedHead en false
+
+HEAD está ahora en beeab7f Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --soft 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (HEAD, master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 0407cefd4415ef37c5839d765363973628ea229f (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:42:34 2026 +0200
+
+    fondo azul 2
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Advertencia: estás dejando 1 commit atrás, no está conectado
+a ninguna rama:
+
+  0407cef fondo azul 2
+
+Si quieres conservarlo creando una nueva rama, este es un buen momento
+para hacerlo:
+
+ git branch <nuevo-nombre-de-rama> 0407cef
+
+HEAD está ahora en 444e883 fondo azul
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --hard 0407cefd4415ef37c5839d765363973628ea229f
+HEAD está ahora en 0407cef fondo azul 2
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 0407cefd4415ef37c5839d765363973628ea229f (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:42:34 2026 +0200
+
+    fondo azul 2
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --hard                                         
+HEAD está ahora en 0407cef fondo azul 2
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --hard
+HEAD está ahora en 0407cef fondo azul 2
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --hard 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+HEAD está ahora en 444e883 fondo azul
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (HEAD, master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 1e9ed98021156f0fc22afbe5151570c35485038e (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:50:59 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --soft 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (HEAD, master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log                                                  
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --hard 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+HEAD está ahora en 444e883 fondo azul
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --hard e5a583bca6cb2f5783a5e531a5e3beed6148644b
+HEAD está ahora en e5a583b agrego parrafo
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --hard 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+HEAD está ahora en 444e883 fondo azul
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout e5a583bca6cb2f5783a5e531a5e3beed6148644b
+La posición previa de HEAD era 444e883 fondo azul
+HEAD está ahora en e5a583b agrego parrafo
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --hard 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+HEAD está ahora en 444e883 fondo azul
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (HEAD, master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --hard e5a583bca6cb2f5783a5e531a5e3beed6148644b 
+HEAD está ahora en e5a583b agrego parrafo
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset 444e883c0f2b8d9bc93ef25594b7894d56d5d520 
+Cambios fuera del área de stage tras el reset:
+M	index.html
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset e5a583bca6cb2f5783a5e531a5e3beed6148644b
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --mixed  444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Cambios fuera del área de stage tras el reset:
+M	index.html
+anabel@MacBook-Air-de-Anabel EjemploBranch % git reset --mixed  e5a583bca6cb2f5783a5e531a5e3beed6148644b
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b (HEAD)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git branch pepito
+anabel@MacBook-Air-de-Anabel EjemploBranch % git branch
+* (HEAD desacoplado en e5a583b)
+  master
+  pepito
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout pepito
+Cambiado a rama 'pepito'
+anabel@MacBook-Air-de-Anabel EjemploBranch % git grafo
+* e5a583b (HEAD -> pepito) agrego parrafo
+* 444e883 (master) fondo azul
+* beeab7f Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git add index.html
+anabel@MacBook-Air-de-Anabel EjemploBranch % git commit -m "boton pulsame" 
+[pepito ac3282d] boton pulsame
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploBranch % git grafo                     
+* ac3282d (HEAD -> pepito) boton pulsame
+* e5a583b agrego parrafo
+* 444e883 (master) fondo azul
+* beeab7f Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git add -A
+anabel@MacBook-Air-de-Anabel EjemploBranch % git commit -m "click boton"
+[pepito 9e0b56f] click boton
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+ create mode 100644 js/codigo.js
+anabel@MacBook-Air-de-Anabel EjemploBranch % git grafo
+* 9e0b56f (HEAD -> pepito) click boton
+* ac3282d boton pulsame
+* e5a583b agrego parrafo
+* 444e883 (master) fondo azul
+* beeab7f Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout master
+Cambiado a rama 'master'
+anabel@MacBook-Air-de-Anabel EjemploBranch % git grafo
+* 9e0b56f (pepito) click boton
+* ac3282d boton pulsame
+* e5a583b agrego parrafo
+* 444e883 (HEAD -> master) fondo azul
+* beeab7f Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git merge pepito
+Actualizando 444e883..9e0b56f
+Fast-forward
+ index.html   | 4 ++++
+ js/codigo.js | 3 +++
+ 2 files changed, 7 insertions(+)
+ create mode 100644 js/codigo.js
+anabel@MacBook-Air-de-Anabel EjemploBranch % git commit -am "merge pepito"
+En la rama master
+nada para hacer commit, el árbol de trabajo está limpio
+anabel@MacBook-Air-de-Anabel EjemploBranch % git grafo
+* 9e0b56f (HEAD -> master, pepito) click boton
+* ac3282d boton pulsame
+* e5a583b agrego parrafo
+* 444e883 fondo azul
+* beeab7f Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git branch
+* master
+  pepito
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout pepito
+Cambiado a rama 'pepito'
+anabel@MacBook-Air-de-Anabel EjemploBranch % git commit -am "formulario pepito"
+[pepito 4f4923e] formulario pepito
+ 1 file changed, 6 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploBranch % git grafo
+* 4f4923e (HEAD -> pepito) formulario pepito
+* 9e0b56f (master) click boton
+* ac3282d boton pulsame
+* e5a583b agrego parrafo
+* 444e883 fondo azul
+* beeab7f Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout master
+Cambiado a rama 'master'
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git branch juanito
+anabel@MacBook-Air-de-Anabel EjemploBranch % git branch
+  juanito
+* master
+  pepito
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout juanito
+Cambiado a rama 'juanito'
+anabel@MacBook-Air-de-Anabel EjemploBranch % git add -A
+anabel@MacBook-Air-de-Anabel EjemploBranch % git commit -m "formulario juanito"
+[juanito 0e1184a] formulario juanito
+ 3 files changed, 14 insertions(+)
+ create mode 100644 js/a.js
+ create mode 100644 js/b.js
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (HEAD -> juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+:...skipping...
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (HEAD -> juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (HEAD -> juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+:...skipping...
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (HEAD -> juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+:...skipping...
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (HEAD -> juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+:...skipping...
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (HEAD -> juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (HEAD -> juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+:...skipping...
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (HEAD -> juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797 (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+commit beeab7f57074ac15f5096017072f5d963f40274a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 10:59:39 2026 +0200
+
+    Pagina index creada
+~
+anabel@MacBook-Air-de-Anabel EjemploBranch % git grafo
+* 0e1184a (HEAD -> juanito) formulario juanito
+| * 4f4923e (pepito) formulario pepito
+|/  
+* 9e0b56f (master) click boton
+* ac3282d boton pulsame
+* e5a583b agrego parrafo
+* 444e883 fondo azul
+* beeab7f Pagina index creada
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout master
+Cambiado a rama 'master'
+anabel@MacBook-Air-de-Anabel EjemploBranch % git merge pepito juanito
+Realizando fast-forward a: pepito
+Intentando fusión simple con juanito
+Fusión simple no funcionó, intentando fusión automática.
+Auto-merging index.html
+ERROR: content conflict in index.html
+fatal: merge program failed
+Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.
+anabel@MacBook-Air-de-Anabel EjemploBranch % git merge pepito juanito
+fatal: No has concluido la fusión (existe MERGE_HEAD).
+Por favor, realiza un commit con los cambios antes de fusionar.
+anabel@MacBook-Air-de-Anabel EjemploBranch % git status
+En la rama master
+nada para hacer commit, el árbol de trabajo está limpio
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit d324eb40ff7901c69ade85aaa1a0b710abeb149c (HEAD -> master)
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+    fondo azul
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+:
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+    click boton
+
+commit ac3282dba07dc34f6b4f3ae1d91b79e6cd696b86
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:27:45 2026 +0200
+
+    boton pulsame
+
+commit e5a583bca6cb2f5783a5e531a5e3beed6148644b
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:59:05 2026 +0200
+
+    agrego parrafo
+
+commit 444e883c0f2b8d9bc93ef25594b7894d56d5d520
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 11:34:25 2026 +0200
+
+anabel@MacBook-Air-de-Anabel EjemploBranch % git branch
+  juanito
+* master
+  pepito
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout pepito
+Cambiado a rama 'pepito'
+anabel@MacBook-Air-de-Anabel EjemploBranch % git commit -am "fondo amarillo pepito"
+[pepito a552fe6] fondo amarillo pepito
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout juanito                  
+Cambiado a rama 'juanito'
+anabel@MacBook-Air-de-Anabel EjemploBranch % git commit -am "fondo rosa juanito"   
+[juanito 4807e85] fondo rosa juanito
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploBranch % git checkout master
+Cambiado a rama 'master'
+anabel@MacBook-Air-de-Anabel EjemploBranch % git merge pepito juanito
+Intentando fusión simple con pepito
+Fusión simple no funcionó, intentando fusión automática.
+Auto-merging index.html
+Intentando fusión simple con juanito
+Fusión simple no funcionó, intentando fusión automática.
+Auto-merging index.html
+ERROR: content conflict in index.html
+fatal: merge program failed
+Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.
+anabel@MacBook-Air-de-Anabel EjemploBranch % git commit -am "merge color"       
+En la rama master
+nada para hacer commit, el árbol de trabajo está limpio
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 4bd205623fc6b0d8fc83ff6387aa131a3972845a (HEAD -> master)
+Merge: d324eb4 a552fe6 4807e85
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:21:20 2026 +0200
+
+    Merge branches 'pepito' and 'juanito' color
+
+commit 4807e8594d86aacee8b44b6e49208ebe9a07d2a8 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:18:12 2026 +0200
+
+    fondo rosa juanito
+
+commit a552fe6269e6b49831ddffa50ea6728fa1508282 (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:17:20 2026 +0200
+
+    fondo amarillo pepito
+
+commit d324eb40ff7901c69ade85aaa1a0b710abeb149c
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+anabel@MacBook-Air-de-Anabel EjemploBranch % git tag v1.0
+anabel@MacBook-Air-de-Anabel EjemploBranch % git log
+commit 4bd205623fc6b0d8fc83ff6387aa131a3972845a (HEAD -> master, tag: v1.0)
+Merge: d324eb4 a552fe6 4807e85
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:21:20 2026 +0200
+
+    Merge branches 'pepito' and 'juanito' color
+
+commit 4807e8594d86aacee8b44b6e49208ebe9a07d2a8 (juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:18:12 2026 +0200
+
+    fondo rosa juanito
+
+commit a552fe6269e6b49831ddffa50ea6728fa1508282 (pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:17:20 2026 +0200
+
+    fondo amarillo pepito
+
+commit d324eb40ff7901c69ade85aaa1a0b710abeb149c
+Merge: 4f4923e 0e1184a
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 13:02:06 2026 +0200
+
+    Merge branches 'pepito' and 'juanito'
+
+commit 0e1184afc7ee9145c26f2ca00d69fb844af5e552
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:55:48 2026 +0200
+
+    formulario juanito
+
+commit 4f4923e46f8c7509ad0e3d02ac06a9ae52eca6af
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:49:15 2026 +0200
+
+    formulario pepito
+
+commit 9e0b56f1c3e51ee8c1310e00defab5ec53d0d797
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Wed Apr 8 12:34:08 2026 +0200
+
+:
