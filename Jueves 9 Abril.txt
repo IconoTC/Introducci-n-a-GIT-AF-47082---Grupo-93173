@@ -1,0 +1,180 @@
+Last login: Thu Apr  9 10:15:16 on ttys000
+anabel@MacBook-Air-de-Anabel ~ % cd Desktop 
+anabel@MacBook-Air-de-Anabel Desktop % cd GIT_Indra_7_Abril_2026 
+anabel@MacBook-Air-de-Anabel GIT_Indra_7_Abril_2026 % cd EjemploGitHub 
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git branch
+  juanito
+* main
+  pepito
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git merge pepito
+fatal: No has concluido la fusión (existe MERGE_HEAD).
+Por favor, realiza un commit con los cambios antes de fusionar.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git merge pepito
+Ya está actualizado.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git merge juanito
+Ya está actualizado.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull
+Ya está actualizado.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout juanito
+Cambiado a rama 'juanito'
+Tu rama está actualizada con 'origin/juanito'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull
+Ya está actualizado.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git merge main
+Actualizando 9e49891..4d111b8
+Fast-forward
+ index.html | 3 +++
+ js/a.js    | 3 +++
+ 2 files changed, 6 insertions(+)
+ create mode 100644 js/a.js
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull
+Ya está actualizado.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull main juanito
+fatal: 'main' does not appear to be a git repository
+fatal: No se pudo leer del repositorio remoto.
+
+Por favor asegúrate de que tengas los permisos de acceso correctos
+y que el repositorio exista.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull origin juanito
+Desde https://github.com/anaisabelveg/IndraGit
+ * branch            juanito    -> FETCH_HEAD
+Ya está actualizado.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull origin main   
+Desde https://github.com/anaisabelveg/IndraGit
+ * branch            main       -> FETCH_HEAD
+Ya está actualizado.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout main
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout pepito
+Cambiado a rama 'pepito'
+Tu rama está actualizada con 'origin/pepito'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout juanito
+Cambiado a rama 'juanito'
+Tu rama está actualizada con 'origin/juanito'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout main   
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout juanito
+Cambiado a rama 'juanito'
+Tu rama está actualizada con 'origin/juanito'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull origin main
+Desde https://github.com/anaisabelveg/IndraGit
+ * branch            main       -> FETCH_HEAD
+Actualizando 7aafbd4..4bbc0d0
+Fast-forward
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout pepito 
+Cambiado a rama 'pepito'
+Tu rama está actualizada con 'origin/pepito'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull origin main
+Desde https://github.com/anaisabelveg/IndraGit
+ * branch            main       -> FETCH_HEAD
+Actualizando 7aafbd4..4bbc0d0
+Fast-forward
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout main   
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout pepito
+Cambiado a rama 'pepito'
+Tu rama está actualizada con 'origin/pepito'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git log
+commit 358e7e28b72df2735c2bea08528e947114c7d600 (HEAD -> pepito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Thu Apr 9 13:16:06 2026 +0200
+
+    Parrafo 2 Pepito
+
+commit 4932920ebcb73b559024401993114ae5c072dd5c
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Thu Apr 9 13:15:24 2026 +0200
+
+    Parrafo 1 Pepito
+
+commit 4bbc0d05178dab9c91ab92e3f7c465fdef7835b0 (origin/pepito, origin/main, origin/juanito, origin/HEAD, main, juanito)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Thu Apr 9 12:44:01 2026 +0200
+
+    Otra prueba mas
+
+commit 7aafbd4d3ec72f869ad4bdfcf48c98427e280518
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Thu Apr 9 12:39:17 2026 +0200
+
+    prueba pull
+
+commit 4d111b8139ddfc6265d6a52024f58b864753bd3a
+Merge: 9e49891 659aa63
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Thu Apr 9 12:26:37 2026 +0200
+
+    Merge branch 'pepito'
+
+commit 659aa63f43670b2832c71e897d82c73bf38d8f64
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Thu Apr 9 12:20:38 2026 +0200
+
+    "boton con a.js"
+
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout main
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git cherry-pick 4932920ebcb73b559024401993114ae5c072dd5c
+[main c519ecc] Parrafo 1 Pepito
+ Date: Thu Apr 9 13:15:24 2026 +0200
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout pepito                                     
+Cambiado a rama 'pepito'
+Tu rama está adelantada a 'origin/pepito' por 2 commits.
+  (usa "git push" para publicar tus commits locales)
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull origin main
+Desde https://github.com/anaisabelveg/IndraGit
+ * branch            main       -> FETCH_HEAD
+hint: Las ramas se han divergido y hay que especificar cómo reconciliarlas.
+hint: Se puede hacerlo ejecutando uno de los comandos siguiente antes del
+hint: próximo pull:
+hint:
+hint:   git config pull.rebase false  # fusionar
+hint:   git config pull.rebase true   # rebasar
+hint:   git config pull.ff only       # solo avance rápido
+hint:
+hint: Se puede reemplazar "git config" con "git config --global" para aplicar
+hint: la preferencia en todos los repositorios. También se puede pasar
+hint: --rebase, --no-rebase o --ff-only en el comando para sobrescribir la
+hint: configuración por defecto en cada invocación.
+fatal: Necesita especificar cómo reconciliar las ramas divergentes.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull --rebase  origin main
+Desde https://github.com/anaisabelveg/IndraGit
+ * branch            main       -> FETCH_HEAD
+advertencia: se ha saltado el commit 4932920 aplicado previamente
+hint: use --reapply-cherry-picks para incluir los commits saltados
+hint: Disable this message with "git config set advice.skippedCherryPicks false"
+Rebase aplicado satisfactoriamente y actualizado refs/heads/pepito.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout juanito          
+Cambiado a rama 'juanito'
+Tu rama está actualizada con 'origin/juanito'.
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git pull --rebase  origin main
+Desde https://github.com/anaisabelveg/IndraGit
+ * branch            main       -> FETCH_HEAD
+Actualizando 4bbc0d0..c519ecc
+Fast-forward
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git checkout pepito           
+Cambiado a rama 'pepito'
+Tu rama está adelantada a 'origin/pepito' por 2 commits.
+  (usa "git push" para publicar tus commits locales)
+anabel@MacBook-Air-de-Anabel EjemploGitHub % git push
+Enumerando objetos: 5, listo.
+Contando objetos: 100% (5/5), listo.
+Compresión delta usando hasta 10 hilos
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 320 byte | 320.00 KiB/s, listo.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/anaisabelveg/IndraGit.git
+   4bbc0d0..402b437  pepito -> pepito
+anabel@MacBook-Air-de-Anabel EjemploGitHub % 
