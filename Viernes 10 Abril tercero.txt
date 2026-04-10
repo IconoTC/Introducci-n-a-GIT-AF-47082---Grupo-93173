@@ -1,0 +1,105 @@
+Last login: Fri Apr 10 10:40:45 on ttys004
+anabel@MacBook-Air-de-Anabel ~ % cd Desktop 
+anabel@MacBook-Air-de-Anabel Ejemplo_Pull_Request % git clone https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git
+Clonando en 'Introducci-n-a-GIT-AF-47082---Grupo-93173'...
+remote: Enumerating objects: 25, done.
+remote: Counting objects: 100% (25/25), done.
+remote: Compressing objects: 100% (25/25), done.
+remote: Total 25 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+Recibiendo objetos: 100% (25/25), 2.26 MiB | 7.98 MiB/s, listo.
+Resolviendo deltas: 100% (8/8), listo.
+anabel@MacBook-Air-de-Anabel Ejemplo_Pull_Request % cd Introducci-n-a-GIT-AF-47082---Grupo-93173 
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % git remote -v
+origin	https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git (fetch)
+origin	https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git (push)
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % git remote add upstream https://github.com/IconoTC/Introducci-n-a-GIT-AF-47082---Grupo-93173.git
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % git remote -v
+origin	https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git (fetch)
+origin	https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git (push)
+upstream	https://github.com/IconoTC/Introducci-n-a-GIT-AF-47082---Grupo-93173.git (fetch)
+upstream	https://github.com/IconoTC/Introducci-n-a-GIT-AF-47082---Grupo-93173.git (push)
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % git branch corregir-bug
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % git checkout corregir-bug
+Cambiado a rama 'corregir-bug'
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % git branch
+* corregir-bug
+  main
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % git add -A
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % git commit -m "Agrego bug_Anabel.txt" 
+[corregir-bug 6bafc35] Agrego bug_Anabel.txt
+ 2 files changed, 1 insertion(+)
+ create mode 100644 "Presentaci\303\263n Instructor Curso Introducci\303\263n a Git.pdf"
+ create mode 100644 bug_Anabel.txt
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % git push origin corregir-bug
+Enumerando objetos: 4, listo.
+Contando objetos: 100% (4/4), listo.
+Compresión delta usando hasta 10 hilos
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (3/3), 362 byte | 362.00 KiB/s, listo.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'corregir-bug' on GitHub by visiting:
+remote:      https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173/pull/new/corregir-bug
+remote: 
+To https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git
+ * [new branch]      corregir-bug -> corregir-bug
+anabel@MacBook-Air-de-Anabel Introducci-n-a-GIT-AF-47082---Grupo-93173 % cd ..
+anabel@MacBook-Air-de-Anabel Ejemplo_Pull_Request % cd ..
+anabel@MacBook-Air-de-Anabel GIT_Indra_7_Abril_2026 % cd EjemploJava 
+anabel@MacBook-Air-de-Anabel EjemploJava % git log
+commit 82dfa1e2b615570d7257c66da4196a4d40b6538c (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 12:34:30 2026 +0200
+
+    Primer Commit
+anabel@MacBook-Air-de-Anabel EjemploJava % git log       
+commit e53b5f0897324fa9f4c6046c8b3a4ed7f2b1031f (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 12:38:51 2026 +0200
+
+    Segundo commit
+
+commit 82dfa1e2b615570d7257c66da4196a4d40b6538c
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 12:34:30 2026 +0200
+
+    Primer Commit
+anabel@MacBook-Air-de-Anabel EjemploJava % git log
+commit ff06d338f6f732c84bf227f7028c7d3da772304c (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 12:41:28 2026 +0200
+
+    Tercer commit
+
+commit e53b5f0897324fa9f4c6046c8b3a4ed7f2b1031f
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 12:38:51 2026 +0200
+
+    Segundo commit
+
+commit 82dfa1e2b615570d7257c66da4196a4d40b6538c
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 12:34:30 2026 +0200
+
+    Primer Commit
+anabel@MacBook-Air-de-Anabel EjemploJava % git remote -v
+anabel@MacBook-Air-de-Anabel EjemploJava % git remote add origin https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git
+anabel@MacBook-Air-de-Anabel EjemploJava % git remote -v                                                                                      
+origin	https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git (fetch)
+origin	https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git (push)
+anabel@MacBook-Air-de-Anabel EjemploJava % git push origin master
+Enumerando objetos: 27, listo.
+Contando objetos: 100% (27/27), listo.
+Compresión delta usando hasta 10 hilos
+Comprimiendo objetos: 100% (20/20), listo.
+Escribiendo objetos: 100% (27/27), 2.73 KiB | 2.73 MiB/s, listo.
+Total 27 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), done.
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173/pull/new/master
+remote: 
+To https://github.com/anaisabelveg/Introducci-n-a-GIT-AF-47082---Grupo-93173.git
+ * [new branch]      master -> master
+anabel@MacBook-Air-de-Anabel EjemploJava %                                                                                                    

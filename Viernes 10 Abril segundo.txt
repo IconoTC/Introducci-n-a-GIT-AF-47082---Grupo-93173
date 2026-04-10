@@ -1,0 +1,267 @@
+Last login: Fri Apr 10 10:40:39 on ttys001
+anabel@MacBook-Air-de-Anabel ~ % cd Desktop 
+anabel@MacBook-Air-de-Anabel Desktop % cd GIT_Indra_7_Abril_2026 
+anabel@MacBook-Air-de-Anabel GIT_Indra_7_Abril_2026 % cd EjemploFusionesRevert
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Inicializado repositorio Git vacío en /Users/anabel/Desktop/GIT_Indra_7_Abril_2026/EjemploFusionesRevert/.git/
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git add archivo.txt
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git commit -m "Primer commit"
+[master (commit-raíz) 9b49498] Primer commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo.txt
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git add -A                   
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git commit -m "Segundo commit"
+[master 0a20f53] Segundo commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git add -A
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git commit -m "Tercer commit" 
+[master 1216b18] Tercer commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git log
+commit 1216b1810e88bc9580279366bdfe8ca8727b7e40 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:57 2026 +0200
+
+    Tercer commit
+
+commit 0a20f53c99a9158f53743695b53a777596c16cde
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:07 2026 +0200
+
+    Segundo commit
+
+commit 9b49498501dcece3517864d60bbdc96c61429182
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:43:22 2026 +0200
+
+    Primer commit
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git revert 1216b1810e88bc9580279366bdfe8ca8727b7e40
+[master ca907a9] Revert "Tercer commit"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git log
+commit ca907a94f5c57d2eef2ce35369b2160d183b4727 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:45:45 2026 +0200
+
+    Revert "Tercer commit"
+    
+    This reverts commit 1216b1810e88bc9580279366bdfe8ca8727b7e40.
+    
+    Revertir Tercer Commit
+
+commit 1216b1810e88bc9580279366bdfe8ca8727b7e40
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:57 2026 +0200
+
+    Tercer commit
+
+commit 0a20f53c99a9158f53743695b53a777596c16cde
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:07 2026 +0200
+
+    Segundo commit
+
+commit 9b49498501dcece3517864d60bbdc96c61429182
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:43:22 2026 +0200
+
+:
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:45:45 2026 +0200
+
+    Revert "Tercer commit"
+    
+    This reverts commit 1216b1810e88bc9580279366bdfe8ca8727b7e40.
+    
+    Revertir Tercer Commit
+
+commit 1216b1810e88bc9580279366bdfe8ca8727b7e40
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:57 2026 +0200
+
+    Tercer commit
+
+commit 0a20f53c99a9158f53743695b53a777596c16cde
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:07 2026 +0200
+
+    Segundo commit
+
+commit 9b49498501dcece3517864d60bbdc96c61429182
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:43:22 2026 +0200
+
+    Primer commit
+:
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:45:45 2026 +0200
+
+    Revert "Tercer commit"
+    
+    This reverts commit 1216b1810e88bc9580279366bdfe8ca8727b7e40.
+    
+    Revertir Tercer Commit
+
+commit 1216b1810e88bc9580279366bdfe8ca8727b7e40
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:57 2026 +0200
+
+    Tercer commit
+
+commit 0a20f53c99a9158f53743695b53a777596c16cde
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:07 2026 +0200
+
+    Segundo commit
+
+commit 9b49498501dcece3517864d60bbdc96c61429182
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:43:22 2026 +0200
+
+    Primer commit
+~
+(END)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:45:45 2026 +0200
+
+    Revert "Tercer commit"
+    
+    This reverts commit 1216b1810e88bc9580279366bdfe8ca8727b7e40.
+    
+    Revertir Tercer Commit
+
+commit 1216b1810e88bc9580279366bdfe8ca8727b7e40
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:57 2026 +0200
+
+    Tercer commit
+
+commit 0a20f53c99a9158f53743695b53a777596c16cde
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:07 2026 +0200
+
+    Segundo commit
+
+commit 9b49498501dcece3517864d60bbdc96c61429182
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:43:22 2026 +0200
+
+    Primer commit
+~
+~
+(END)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:45:45 2026 +0200
+
+    Revert "Tercer commit"
+    
+    This reverts commit 1216b1810e88bc9580279366bdfe8ca8727b7e40.
+    
+    Revertir Tercer Commit
+
+commit 1216b1810e88bc9580279366bdfe8ca8727b7e40
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:57 2026 +0200
+
+    Tercer commit
+
+commit 0a20f53c99a9158f53743695b53a777596c16cde
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:07 2026 +0200
+
+    Segundo commit
+
+commit 9b49498501dcece3517864d60bbdc96c61429182
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:43:22 2026 +0200
+
+    Primer commit
+~
+~
+~
+(END)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:45:45 2026 +0200
+
+    Revert "Tercer commit"
+    
+    This reverts commit 1216b1810e88bc9580279366bdfe8ca8727b7e40.
+    
+    Revertir Tercer Commit
+
+commit 1216b1810e88bc9580279366bdfe8ca8727b7e40
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:57 2026 +0200
+
+    Tercer commit
+
+commit 0a20f53c99a9158f53743695b53a777596c16cde
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:07 2026 +0200
+
+    Segundo commit
+
+commit 9b49498501dcece3517864d60bbdc96c61429182
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:43:22 2026 +0200
+
+    Primer commit
+~
+~
+~
+~
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git revert ca907a94f5c57d2eef2ce35369b2160d183b4727 -m "Dehacer revert"
+error: opción `mainline' espera un valor numérico mayor a cero
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git revert ca907a94f5c57d2eef2ce35369b2160d183b4727                    
+[master 1130ab4] Reapply "Tercer commit"
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git log
+commit 1130ab43163bcc82aac8ad31f5274fbb8bd68163 (HEAD -> master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:52:08 2026 +0200
+
+    Reapply "Tercer commit"
+    
+    This reverts commit ca907a94f5c57d2eef2ce35369b2160d183b4727.
+    
+    Deshacer revert
+
+commit ca907a94f5c57d2eef2ce35369b2160d183b4727
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:45:45 2026 +0200
+
+    Revert "Tercer commit"
+    
+    This reverts commit 1216b1810e88bc9580279366bdfe8ca8727b7e40.
+    
+    Revertir Tercer Commit
+
+commit 1216b1810e88bc9580279366bdfe8ca8727b7e40
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:57 2026 +0200
+
+    Tercer commit
+
+commit 0a20f53c99a9158f53743695b53a777596c16cde
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:44:07 2026 +0200
+
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git help  revert                                   
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % 
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % git revert HEAD                                    
+[master 4ce2d0c] Revert "Reapply "Tercer commit""
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRevert % 

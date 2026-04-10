@@ -1,0 +1,106 @@
+Last login: Fri Apr 10 09:53:55 on ttys000
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebaseRevert % cd ..
+anabel@MacBook-Air-de-Anabel GIT_Indra_7_Abril_2026 % cd EjemploFusionesRebase
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Inicializado repositorio Git vacío en /Users/anabel/Desktop/GIT_Indra_7_Abril_2026/EjemploFusionesRebase/.git/
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git add -A
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git commit -m "Primer Comit"
+[master (commit-raíz) 6df2822] Primer Comit
+ 1 file changed, 11 insertions(+)
+ create mode 100644 index.html
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git add -A                  
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git commit -m "Segundo Comit"
+[master 21035d7] Segundo Comit
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git branch feature
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git checkout feature
+Cambiado a rama 'feature'
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git branch
+* feature
+  master
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git add -A
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git commit -m "primer commit feature"
+[feature be4db1e] primer commit feature
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git add -A                           
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git commit -m "segundo commit feature"
+[feature 3e9b8e0] segundo commit feature
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git log
+commit 3e9b8e005f924cfa9a0bcd27b15457d62fef6510 (HEAD -> feature)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:27:42 2026 +0200
+
+    segundo commit feature
+
+commit be4db1e519b46de09e259c3dd419ead930ce8d09
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:26:30 2026 +0200
+
+    primer commit feature
+
+commit 21035d739df389f98b082c43f4a584811abf526e (master)
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:24:34 2026 +0200
+
+    Segundo Comit
+
+commit 6df28222a482a0322c4e0eb33b53d22082e1e304
+Author: Anabel Vegas <anaisabelveg@gmail.com>
+Date:   Fri Apr 10 10:23:40 2026 +0200
+
+    Primer Comit
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git checkout master
+Cambiado a rama 'master'
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git add -A
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git commit -m "Tercer Commit"
+[master faf1916] Tercer Commit
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git checkout feature
+Cambiado a rama 'feature'
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git rebase master
+Auto-fusionando index.html
+CONFLICTO (contenido): Conflicto de fusión en index.html
+error: no se pudo aplicar be4db1e... primer commit feature
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+No se pudo aplicar be4db1e... # primer commit feature
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git add -A
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git rebase --continue
+[HEAD desacoplado 57f37b4] primer commit feature
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Auto-fusionando index.html
+CONFLICTO (contenido): Conflicto de fusión en index.html
+error: no se pudo aplicar 3e9b8e0... segundo commit feature
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+No se pudo aplicar 3e9b8e0... # segundo commit feature
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git checkout master
+error: Los cambios locales de los siguientes archivos serán sobrescritos por checkout:
+	index.html
+Por favor realiza un commit con los cambios o un stash antes de cambiar de rama.
+Abortando
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git add -A           
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % git commit -m "Cuarto Commit"
+[HEAD desacoplado 312efa1] Cuarto Commit
+ 1 file changed, 2 insertions(+)
+anabel@MacBook-Air-de-Anabel EjemploFusionesRebase % 
